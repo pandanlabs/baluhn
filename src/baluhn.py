@@ -47,7 +47,7 @@ def generate(string, base=10, encoder=decimal_encoder,
 
     d = luhn_sum_mod_base(string + encoder(0), base=base, decoder=decoder)
     if d != 0:
-        d = base - d
+        d = base - d - 1
     return encoder(d)
 
 
